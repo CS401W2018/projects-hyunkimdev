@@ -3,7 +3,12 @@ main p {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+main h2 {
+    color:rgb(0, 175, 55);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 footer p {
-    color:#3e9273;
+    color:#dc420e;
     font-family: Arial, Helvetica, sans-serif;
 }
