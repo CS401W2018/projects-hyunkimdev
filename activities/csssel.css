@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#first {
+    color: blue;
+}
+
+.green {
+    color: green;
+}
+
+.bigger {
+    font-size:24pt;
+}
+
+main .green {
+    font-family:Impact;
+}
+
+.bolder {
+    font-weight: bolder;
+}
+
+.dark {
+    background-color: rgb(115, 115, 154);
+}
