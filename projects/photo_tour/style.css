@@ -1,0 +1,9 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    background-image: url('roof-tile-damme-wall-stone-preview.jpg');
+}
+
+.list {
+    list-style-image: url(taegeuk.png);
+}
