@@ -1,9 +1,21 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    color: aliceblue;
-    background-image: url('roof-tile-damme-wall-stone-preview.jpg');
+    color: #fff;
+    background: url('roof-tile-damme-wall-stone-preview.jpg') rgb(85, 76, 65);
 }
 
 .list {
     list-style-image: url(taegeuk.png);
+}
+
+main {
+    background: url('korea-flag.jpg') top right no-repeat;
+}
+
+nav a {
+    color: deepskyblue;
+}
+
+.current {
+    color: #BBB
 }
