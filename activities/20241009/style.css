@@ -1,0 +1,19 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header {
+    background-color: aquamarine;
+    width: 70%;
+    margin: 30px;
+    padding: 50px 30px 100px 3px;
+
+}
+
+header h1 {
+    
+}
+
+nav {
+    background-color: blue;
+}
