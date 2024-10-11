@@ -11,9 +11,17 @@ header {
 }
 
 header h1 {
-    
+    background-color: aliceblue;
 }
 
 nav {
     background-color: blue;
+}
+
+figure {
+
+}
+
+img {
+    
 }
