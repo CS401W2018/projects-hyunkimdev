@@ -10,8 +10,8 @@ header {
 #treepic {
     width: 250px;
     border: thin solid black;
-    /*float: left;*/
-    position: relative;
+    float: left;
+    /*position:  relative;*/
     top: 100px;
     left: 100px;
 }
