@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(81, 139, 145);
+}
+
+#wrapper {
+    width: 900px ;
+    margin: 0 auto;
+    background-color: #FFF;
+    border: thin solid black;
+}
+
+figure {
+    border: thin solid #000;
+    width: 200px;
+}
+
+main {
+    margin-top: 30px;
+    padding: 10px 30px;
+}
+
+header {
+    width: 600px;
+    text-shadow: #FFF;
+    background-color: #4e9b70;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.5;
+    margin: 30px auto;
+    padding: 10px 100px 10px 300px auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    
+}
+
+header h1 {
+    border: thin solid #000;
+    font-weight: bold;
+}
+
+main h1 {
+    font-size: large;
+    text-align: center;
+    background-color: aquamarine;
+    width: 300px;
+    height: 20px;
+    margin: 20px;
+    padding: 15px;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 5px #ffffff;
+}
+
+#theaterpic {
+    width: 350px;
+    border: thin solid black;
+    float: left;
+    /*position:  relative;*/
+    top: 100px;
+    left: 100px;
+}
+
+#theaterpic img {
+    width: 350px;
+}
+
+nav {
+    width: 700px;
+    background-color: aquamarine;
+    margin: 30px auto;
+    padding: 30px auto;
+}
+
+nav ul {
+    list-style-type: none;
+    
+}
+
+nav li {
+    display: inline;
+}
+
+nav a {
+    display: block;
+    background-color: cadetblue;
+    color: white;
+    border-bottom: thin solid white;
+    padding: 10px 20px;
+    float: left;
+    margin-left: 10px
+}
+
+nav a:hover {
+    color: aquamarine;
+    background-color: rgb(171, 171, 171);
+}
+
+.end {
+    clear:both;
+}
+
+footer {
+    border-top: thin solid black;
+    padding: 50px;
+    background: url('movieicon.png') top right no-repeat;
+}
