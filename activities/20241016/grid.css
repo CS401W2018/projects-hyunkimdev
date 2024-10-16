@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    background-color: cadetblue;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    /*grid-template-columns: 10% 50% 40%;*/
+    grid-template-areas:
+        "header header header"
+        "lside main rside"
+        "footer1 footer2 footer3"
+    ;
+}
+
+.item {
+    background-color: lightblue;
+    border: thin solid #000;
+}
+
+.itemA {
+    grid-area: lsdie;
+}
+
+.itemB {
+    grid-area: rsdie;
+}
+
+.itemC {
+    grid-area: header;
+}
+
+.itemD {
+    grid-area: main;
+}
+
+.itemE {
+    grid-area: footer1;
+}
+
+.itemF {
+    grid-area: footer2;
+}
