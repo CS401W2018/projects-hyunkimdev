@@ -1,0 +1,97 @@
+/* styles.css */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #2e7d32;
+    color: white;
+    padding: 1px;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    background-color: #388e3c;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 1px;
+    display: block;
+}
+
+.container {
+    display: flex;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+main {
+    flex: 2;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #e8f5e9;
+    padding: 15px;
+    margin-left: 20px;
+    border-radius: 4px;
+}
+
+.attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.attendance-table caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+    color: #2e7d32;
+}
+
+.attendance-table thead {
+    background-color: #2e7d32;
+    color: white;
+}
+
+.attendance-table tbody tr:nth-child(even) {
+    background-color: #c8e6c9;
+}
+
+.attendance-table tbody tr:nth-child(odd) {
+    background-color: #e8f5e9;
+}
+
+.attendance-table th, .attendance-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+tfoot {
+    background-color: #2e7d32;
+    color: white;
+}
+
+footer {
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    margin-top: 20px;
+}
