@@ -1,9 +1,36 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
 }
 
-.form-row, .check-row {
+header, footer {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 10px;
+}
+
+main {
     display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+form {
+    max-width: 600px;
+}
+
+fieldset {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+legend {
+    font-size: 1.2em;
+    padding: 5px;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
     gap: 10px;
     margin: 10px 0;
 }
@@ -13,50 +40,28 @@ body {
     text-align: right;
 }
 
-.spacer {
-    width: 150px;
-    text-align: right;
-}
-
 input:not([type='submit']), select, textarea {
-    padding: 10px;
-    font-size: 1.5em;
-    border-radius: 3px;
-    background-color: #AAA;
-}
-
-input:not([type='submit']):focus, select:focus, textarea:focus {
-    background-color: white;
+    padding: 5px;
+    font-size: 1em;
 }
 
 input[type='submit'] {
-    padding: 10px;
-    background-color: blue;
+    padding: 5px 10px;
+    background-color: #007bff;
     color: white;
-    border-radius: 5px;
-    box-shadow: 5px 5px 3px rgba(200, 200, 200, 50%);
-}
-
-fieldset {
-    box-shadow: 5px 5px 3px rgba(200, 200, 200, 50%);
-}
-
-legend {
-    padding: 10px;
-    background-color: blue;
-    color: white;
+    border: none;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 600px) {
-    .form-row, .check-row {
+    .form-row {
         flex-direction: column;
     }
-}
-
-.form-row label {
-    text-align: left;
-}
-
-.spacer {
-    text-align: left;
+    .form-row label {
+        text-align: left;
+        width: auto;
+    }
+    input[type='submit'] {
+        width: 100%;
+    }
 }
