@@ -1,7 +1,7 @@
 document.getElementById('signupForm').addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent normal form submission
+    event.preventDefault(); // Form 기본 제출 막기
 
-    // Collect form inputs
+    // 폼 데이터 수집
     const formData = {
         firstName: document.getElementById('firstNameInput').value,
         email: document.getElementById('emailInput').value,
@@ -14,41 +14,31 @@ document.getElementById('signupForm').addEventListener('submit', function (event
         comment: document.getElementById('comment').value
     };
 
-    // Input validation
+    // 데이터 유효성 검사
     if (!formData.firstName || !formData.email || !formData.password) {
-        alert("Please fill out all required fields (First Name, Email, Password).");
+        alert("필수 항목(이름, 이메일, 비밀번호)을 입력해주세요.");
         return;
     }
 
     if (!/^\d{3}-\d{3}-\d{4}$/.test(formData.phone)) {
-        alert("Phone number must be in the format 123-456-7890.");
+        alert("전화번호는 123-456-7890 형식이어야 합니다.");
         return;
     }
 
     if (formData.password.length < 8) {
-        alert("Password must be at least 8 characters long.");
+        alert("비밀번호는 최소 8자 이상이어야 합니다.");
         return;
     }
 
-    // Log the form data to the console
-    console.log("Form Data: ", formData);
+    // 모의 데이터 응답
+    const mockResponse = {
+        message: "Thank you for signing up! Your data has been received."
+    };
 
-    // Fetch API to simulate AJAX call
-    fetch('./response.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            // Display success message from the JSON response
-            document.getElementById('message').innerText = data.message;
-            alert("Form Submitted Successfully!");
-            document.getElementById('signupForm').reset(); // Reset the form
-        })
-        .catch(error => {
-            alert("Error submitting form.");
-            console.error("Fetch error: ", error);
-        });
+    // 모의 응답 처리
+    setTimeout(() => {
+        document.getElementById('message').innerText = mockResponse.message; // 응답 메시지 표시
+        alert("Form Submitted Successfully!"); // 제출 성공 알림
+        document.getElementById('signupForm').reset(); // 폼 초기화
+    }, 1000); // 지연 시간 추가 (서버와의 실제 통신처럼 보이게)
 });
