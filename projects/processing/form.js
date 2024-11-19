@@ -51,5 +51,22 @@ document.getElementById('signupForm').addEventListener('submit', function (event
         }
     };
 
+    fetch('./response.json')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        document.getElementById('message').innerText = data.message;
+        alert("Form Submitted Successfully!");
+        document.getElementById('signupForm').reset();
+    })
+    .catch(error => {
+        alert("Error submitting form.");
+        console.error("Fetch error: ", error);
+    });
+
     xhr.send(JSON.stringify(formData));
 });
