@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Forms</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="forms.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<header>
+    <h1>Forms</h1>
+</header>
+<main>
+    <form action="processing.php" method="post">
+        <fieldset>
+            <legend>Sign Up Form</legend>
+
+            <div class="form-row">
+                <label for="firstNameInput">First Name: </label>
+                <input type="text" name="firstName" id="firstNameInput" placeholder="First Name">
+            </div>
+
+            <div class="form-row">
+                <label for="emailInput">Email: </label>
+                <input type="email" name="email" id="emailInput">
+            </div>
+
+            <div class="form-row">
+                <label for="phoneInput">Phone: </label>
+                <input type="tel" name="phone" id="phoneInput" placeholder="123-456-7890">
+            </div>
+
+            <div class="form-row">
+                <label for="password">Password: </label>
+                <input type="password" name="password" id="password">
+            </div>
+
+            <div class="form-row">
+                <label for="birthdate">Birthdate: </label>
+                <input type="date" name="birthdate" id="birthdate">
+            </div>
+
+            <div class="form-row">
+                Gender:
+                <label><input type="radio" name="gender" value="male"> Male</label>
+                <label><input type="radio" name="gender" value="female" checked> Female</label>
+            </div>
+
+            <div class="form-row">
+                <label><input type="checkbox" name="agree" value="agree"> I agree to the terms.</label>
+            </div>
+
+            <div class="form-row">
+                <label for="state">State: </label>
+                <select name="state" id="state">
+                    <option value="ca">California</option>
+                    <option value="hi" selected>Hawaii</option>
+                    <option value="ut">Utah</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label for="comment">Comment: </label>
+                <textarea name="comment" id="comment" placeholder="Leave a comment..."></textarea>
+            </div>
+
+            <div class="form-row">
+                <input type="submit" value="Sign Up!">
+            </div>
+        </fieldset>
+    </form>
+    <h1>Engagement</h1>
+    <h2>What is DNS?</h2>
+    <p>DNS changes website names (like google.com) into numbers (IP addresses) computers use.</p>
+    <h2>How do you get a domain name?</h2>
+    <p>Buy it from a website like GoDaddy or Namecheap.</p>
+    <h2>What is SSL?</h2>
+    <p>SSL keeps your data safe by making a secure connection.</p>
+    <h2>How do you get a security certificate?</h2>
+    <p>Buy it or get it free from Let’s Encrypt.</p>
+    <h2>How does SSL work?</h2>
+    <p>It makes a safe link and hides your data.</p>
+    <h2>How do you stay safe online?</h2>
+    <p>Use strong passwords, don’t click bad links, and update your apps.</p>
+
+</main>
+<footer>
+    <p>&copy; 2024 Hyun Kim</p>
+</footer>
+<script>
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const first = document.getElementById('firstName').value;
+        const last = document.getElementById('lastName').value;
+        if (!first || !last) {
+            alert("You need to")
+            return
+        }
+        
+        console.log(first);
+        console.log(last);
+        alert("Form Submitted");
+        //alert("Hello");
+    })
+</script>
+</body>
+</html>
