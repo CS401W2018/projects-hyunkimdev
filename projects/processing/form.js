@@ -33,40 +33,22 @@ document.getElementById('signupForm').addEventListener('submit', function (event
     // Log the form data to the console
     console.log("Form Data: ", formData);
 
-    // AJAX Request
-    const xhr = new XMLHttpRequest();
-    xhr.open("GET", "response.json", true); // Use "GET" for GitHub hosting
-    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            const response = JSON.parse(xhr.responseText);
-            document.getElementById('message').innerText = response.message;
-
-            // Indicate form submission
-            document.getElementById('signupForm').reset();
-            alert("Form Submitted Successfully!");
-        } else if (xhr.readyState === 4) {
-            alert("Error submitting form.");
-        }
-    };
-
+    // Fetch API to simulate AJAX call
     fetch('./response.json')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.json();
-    })
-    .then(data => {
-        document.getElementById('message').innerText = data.message;
-        alert("Form Submitted Successfully!");
-        document.getElementById('signupForm').reset();
-    })
-    .catch(error => {
-        alert("Error submitting form.");
-        console.error("Fetch error: ", error);
-    });
-
-    xhr.send(JSON.stringify(formData));
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Display success message from the JSON response
+            document.getElementById('message').innerText = data.message;
+            alert("Form Submitted Successfully!");
+            document.getElementById('signupForm').reset(); // Reset the form
+        })
+        .catch(error => {
+            alert("Error submitting form.");
+            console.error("Fetch error: ", error);
+        });
 });
