@@ -100,7 +100,14 @@ footer {
     }
 }
 
-/* Existing styles remain unchanged */
+.course {
+    padding: 10px;
+    padding-left: 30px;
+    margin: 10px;
+    border: 1px solid #000;
+    color: white;
+    background-color:darkred;
+}
 
 form {
     margin: 20px auto;
