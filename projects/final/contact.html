@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Hyun Kim</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        Hyun Kim
+    </header>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="skills.html">Skills</a>
+        <a href="experiences.html">Experiences</a>
+        <a href="education.html">Education</a>
+        <a href="#">Link 4</a>
+        <a href="contact.html" class="current">Contact</a>
+    </nav>
+    <main>
+        <form action="send_message.php" method="post">
+            <fieldset>
+                <legend>Contact Us</legend>
+    
+                <div class="form-row">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Your Name" required>
+                </div>
+    
+                <div class="form-row">
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" placeholder="Your Email" required>
+                </div>
+    
+                <div class="form-row">
+                    <label for="message">Message: </label>
+                    <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+                </div>
+    
+                <div class="form-row">
+                    <input type="submit" value="Send Message">
+                </div>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        &copy;2024 Hyun Kim. All Rights Reserved.
+    </footer>
+</body>
+</html>
