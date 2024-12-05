@@ -1,37 +1,34 @@
 document.getElementById("myForm").addEventListener("submit", function(event) {
     event.preventDefault();
-    const first = document.getElementById("firstName").value;
-    const last = document.getElementById("lastName").value;
-    const age = document.getElementById("age").value;
-
-    if (!first || !last) {
-        alert("Please provide your full name.");
-        return;
+  
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+    const confirmation = document.getElementById("confirmation").checked;
+  
+    if (!name) {
+      alert("Please provide your name.");
+      return;
     }
-
-    if (!age || age < 18) {
-        alert("You must be 18 years or older to submit this form.");
-        return;
+  
+    if (!email) {
+      alert("Please provide your email.");
+      return;
     }
-
+  
+    if (!message) {
+      alert("Please provide your message.");
+      return;
+    }
+  
     const data = {
-        firstName: first,
-        lastName: last,
-        age: age
+      name: name,
+      email: email,
+      message: message,
+      confirmation: confirmation
     };
-
-    const xhr = new XMLHttpRequest();
-    xhr.open("POST", "submit.json", true);
-    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            const response = JSON.parse(xhr.responseText);
-            document.getElementById("message").innerHTML = response.message;
-            document.getElementById("myForm").innerHTML = "";
-        } else if (xhr.readyState === 4) {
-            alert("Error submitting form.");
-        }
-    };
-    xhr.send(JSON.stringify(data));
+  
     console.log(data);
-});
+
+    alert("Your message has been successfully sent!");
+  });

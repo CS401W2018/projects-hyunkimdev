@@ -74,7 +74,7 @@ table th {
 
 section {
     margin-bottom: 20px;
-  }
+}
 
 footer {
     text-align: center;
@@ -100,19 +100,6 @@ footer {
     }
 }
 
-#bigger {
-    font-size: x-large;
-}
-
-.course {
-    padding: 10px;
-    padding-left: 30px;
-    margin: 10px;
-    border: 1px solid #000;
-    color: white;
-    background-color:darkred;
-}
-
 form {
     margin: 20px auto;
     padding: 20px;
@@ -120,35 +107,16 @@ form {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-fieldset {
-    border: none;
-    margin: 0;
-    padding: 0;
+form input {
+    margin: 10px;
+    padding: 10px;
 }
 
-legend {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.form-row {
-    margin-bottom: 15px;
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-input, textarea, select {
+input, textarea {
     width: 100%;
+    margin: 5px;
     padding: 10px;
     font-size: 1em;
     border: 1px solid #ccc;
@@ -158,7 +126,14 @@ input, textarea, select {
 
 textarea {
     resize: vertical;
-    height: 100px;
+    height: 120px;
+}
+
+input[type="checkbox"] {
+    margin: 15px;
+    width: auto;
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
 input[type="submit"] {
@@ -174,16 +149,4 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #45a049;
-}
-
-#formResponse {
-    margin-top: 20px;
-    padding: 15px;
-    text-align: center;
-    font-weight: bold;
-    color: #155724;
-    background-color: #d4edda;
-    border: 1px solid #c3e6cb;
-    border-radius: 5px;
-    display: none;
 }

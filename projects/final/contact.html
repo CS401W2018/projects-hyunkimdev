@@ -19,28 +19,15 @@
         <a href="contact.html" class="current">Contact</a>
     </nav>
     <main>
-        <form action="processing.html" method="get" id="myForm">
-          First Name: <input type="text" id="firstName" name="first" placeholder="First Name"><br>
-          Last Name: <input type="text" id="lastName" name="last" placeholder="Last Name"><br>
-          Password: <input type="password" name="pass" id="password"><br>
-          <input type="checkbox" name="remember" checked id="remember"> Remember Me<br>
-          Age: <input type="number" name="age" id="age"><br>
-          Class:<br>
-          <input type="radio" value="freshman">Freshman<br>
-          <input type="radio" value="sophomore">Sophomore<br>
-          <input type="radio" value="junior">Junior<br>
-          <input type="radio" value="senior">Senior<br>
-          State: 
-          <select name="state" id="state">
-            <option value="blank" disabled selected>Make Selection</option>
-            <option value="hi">Hawaii</option>
-            <option value="ca">California</option>
-            <option value="co">Colorado</option>
-            <option value="ut">Utah</option>
-          </select><br>
-          <input type="submit">
+        <form action="processing.html" method="post" id="myForm">
+            <h2>Contact Me</h2>
+            Name: <input type="text" id="name" name="name" placeholder="Your Name"><br>
+            Email: <input type="email" id="email" name="email" placeholder="Your Email"><br>
+            Message: <textarea id="message" name="message" placeholder="Your Message"></textarea><br>
+            <input type="checkbox" name="confirmation" id="confirmation"> Would you like to get a confirmation email?<br>
+            <input type="submit">
         </form>
-    </main>
+      </main>
     
     <footer>
         &copy;2024 Hyun Kim. All Rights Reserved.
