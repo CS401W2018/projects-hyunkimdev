@@ -19,30 +19,26 @@
         <a href="contact.html" class="current">Contact</a>
     </nav>
     <main>
-        <div id="formResponse"></div>
-        <form action="processing.html" method="post" id="myForm">
-            <fieldset>
-                <legend>Contact Me</legend>
-    
-                <div class="form-row">
-                    <label for="name">Name: </label>
-                    <input type="text" name="name" id="name" placeholder="Your Name" required>
-                </div>
-    
-                <div class="form-row">
-                    <label for="email">Email: </label>
-                    <input type="email" name="email" id="email" placeholder="Your Email" required>
-                </div>
-    
-                <div class="form-row">
-                    <label for="message">Message: </label>
-                    <textarea name="message" id="message" placeholder="Your Message" required></textarea>
-                </div>
-    
-                <div class="form-row">
-                    <input type="submit" value="Send Message">
-                </div>
-            </fieldset>
+        <form action="processing.html" method="get" id="myForm">
+          First Name: <input type="text" id="firstName" name="first" placeholder="First Name"><br>
+          Last Name: <input type="text" id="lastName" name="last" placeholder="Last Name"><br>
+          Password: <input type="password" name="pass" id="password"><br>
+          <input type="checkbox" name="remember" checked id="remember"> Remember Me<br>
+          Age: <input type="number" name="age" id="age"><br>
+          Class:<br>
+          <input type="radio" value="freshman">Freshman<br>
+          <input type="radio" value="sophomore">Sophomore<br>
+          <input type="radio" value="junior">Junior<br>
+          <input type="radio" value="senior">Senior<br>
+          State: 
+          <select name="state" id="state">
+            <option value="blank" disabled selected>Make Selection</option>
+            <option value="hi">Hawaii</option>
+            <option value="ca">California</option>
+            <option value="co">Colorado</option>
+            <option value="ut">Utah</option>
+          </select><br>
+          <input type="submit">
         </form>
     </main>
     

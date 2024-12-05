@@ -1,39 +1,37 @@
-document.getElementById("myForm").addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent form submission for demonstration purposes
+document.getElementById("myForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const first = document.getElementById("firstName").value;
+    const last = document.getElementById("lastName").value;
+    const age = document.getElementById("age").value;
 
-    const formResponse = document.getElementById("formResponse");
-    formResponse.innerText = "Your message has been sent successfully!";
-    formResponse.style.display = "block";
+    if (!first || !last) {
+        alert("Please provide your full name.");
+        return;
+    }
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
-
-    if (!name || !email || !message) {
-        alert("Please fill in all the fields.");
+    if (!age || age < 18) {
+        alert("You must be 18 years or older to submit this form.");
         return;
     }
 
     const data = {
-        name: name,
-        email: email,
-        message: message
+        firstName: first,
+        lastName: last,
+        age: age
     };
 
     const xhr = new XMLHttpRequest();
     xhr.open("POST", "submit.json", true);
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-
-    xhr.onreadystatechange = function() {
+    xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
             const response = JSON.parse(xhr.responseText);
-            document.getElementById("formResponse").innerHTML = response.message;
-            document.getElementById("myForm").reset();
+            document.getElementById("message").innerHTML = response.message;
+            document.getElementById("myForm").innerHTML = "";
         } else if (xhr.readyState === 4) {
-            document.getElementById("formResponse").innerHTML = "Error submitting form.";
+            alert("Error submitting form.");
         }
     };
-
     xhr.send(JSON.stringify(data));
     console.log(data);
 });
