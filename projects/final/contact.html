@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Hyun Kim</title>
+    <title>Contact | Hyun Kim</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,11 +15,12 @@
         <a href="skills.html">Skills</a>
         <a href="experiences.html">Experiences</a>
         <a href="education.html">Education</a>
-        <a href="#">Link 4</a>
+        <a href="career.html">Career</a>
         <a href="contact.html" class="current">Contact</a>
     </nav>
     <main>
-        <form action="processing.php" method="post">
+        <div id="formResponse"></div>
+        <form action="processing.html" method="post" id="myForm">
             <fieldset>
                 <legend>Contact Me</legend>
     
@@ -44,8 +45,11 @@
             </fieldset>
         </form>
     </main>
+    
     <footer>
         &copy;2024 Hyun Kim. All Rights Reserved.
     </footer>
+
+    <script src="form.js"></script>
 </body>
 </html>
