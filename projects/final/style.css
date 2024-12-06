@@ -153,7 +153,7 @@ form input {
     padding: 10px;
 }
 
-input, textarea {
+input, textarea, button {
     width: 100%;
     margin: 5px;
     padding: 10px;
@@ -168,17 +168,28 @@ textarea {
     height: 120px;
 }
 
+label {
+    white-space: wrap;
+}
+
 input[type="checkbox"] {
-    margin: 15px;
+    margin: 10px;
+    gap: 1px;
     width: auto;
-    margin-right: 10px;
+    margin-right: 5px;
     vertical-align: middle;
 }
 
-input[type="submit"] {
+.container {
+    display: flex;
+    align-items: center;
+}
+
+button[type="submit"] {
     background-color: #4CAF50;
     color: white;
     font-size: 1em;
+    margin-top: 15px;
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
@@ -186,7 +197,7 @@ input[type="submit"] {
     transition: background-color 0.3s ease;
 }
 
-input[type="submit"]:hover {
+button[type="submit"]:hover {
     background-color: #45a049;
 }
 
@@ -287,3 +298,4 @@ a:hover {
     height: auto;
     border-radius: 10px;
 }
+

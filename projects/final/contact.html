@@ -19,20 +19,32 @@
         <a href="contact.html" class="current">Contact</a>
     </nav>
     <main>
-        <form action="processing.html" method="post" id="myForm">
+        <form id="myForm">
             <h2>Contact Me</h2>
-            Name: <input type="text" id="name" name="name" placeholder="Your Name"><br>
-            Email: <input type="email" id="email" name="email" placeholder="Your Email"><br>
-            Message: <textarea id="message" name="message" placeholder="Your Message"></textarea><br>
-            <input type="checkbox" name="confirmation" id="confirmation"> Would you like to get a confirmation email?<br>
-            <input type="submit">
+            Name: <input type="text" id="name" name="name" placeholder="Your Name" required><br>
+            Email: <input type="email" id="email" name="email" placeholder="Your Email" required><br>
+            Message: <textarea id="message" name="message" placeholder="Your Message" required></textarea><br>
+            <div class="container">
+                <input type="checkbox" name="confirmation" id="confirmation">
+                <label for="confirmation">Would you like to get a confirmation email?</label>
+            </div>
+            <button type="submit">Submit</button>
         </form>
-      </main>
-    
+        <div id="confirmationPage" style="display: none;">
+            <form>
+                <h2>Thank you!</h2>
+                <p><strong>Name:</strong> <span id="displayName"></span></p>
+                <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+                <p><strong>Message:</strong> <span id="displayMessage"></span></p>
+                <p><strong>Confirmation Email:</strong> <span id="displayConfirmation"></span></p>
+                <button type="button" id="backButton">Send Another Message</button>
+            </form>
+        </div>
+        
+    </main>
     <footer>
         &copy;2024 Hyun Kim. All Rights Reserved.
     </footer>
-
     <script src="form.js"></script>
 </body>
 </html>
