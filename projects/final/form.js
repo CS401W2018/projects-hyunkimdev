@@ -31,4 +31,4 @@ document.getElementById("myForm").addEventListener("submit", function(event) {
     console.log(data);
 
     alert("Your message has been successfully sent!");
-  });
+});
