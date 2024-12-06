@@ -179,8 +179,18 @@ input[type="submit"]:hover {
     background-color: #45a049;
 }
 
+iframe {
+    border: none; 
+}
+
+#space h2, h3, p, iframe {
+    margin-top: 10px;
+    padding: 10px;
+    gap: 10px;
+}
+
 .int {
-    color:orange
+    color:orange;
 }
 
 .beginner {
