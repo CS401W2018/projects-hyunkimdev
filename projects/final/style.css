@@ -6,7 +6,7 @@
 }
 
 body {
-    line-height: 1.6;  
+    line-height: 1.6;
 }
 
 #home {
@@ -24,7 +24,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 10);
+    background: rgba(0, 0, 0, 0.1);
 }
 
 header {
@@ -57,6 +57,10 @@ nav a {
 main {
     flex: 1;
     padding: 20px;
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .intro {
@@ -90,7 +94,8 @@ table {
     margin: 20px 0;
 }
 
-table th, table td {
+table th,
+table td {
     border: 1px solid #ddd;
     padding: 10px;
     text-align: left;
@@ -110,33 +115,32 @@ footer {
     background-color: #aef3a5;
 }
 
-@media (max-width: 600px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-    nav a {
-        font-size: larger;
-        padding: 10px;
-    }
-    .intro {
-        flex-direction: column;
-        align-items: center;
-    }
-    .intro img {
-        width: 90%;
-    }
-    .video {
-        padding: 10px;
-    }
-    .video h3 {
-        font-size: 1rem;
-        margin-bottom: 8px;
-    }
-    .video iframe {
-        max-width: 100%;
-        height: auto;
-    }
+article {
+    width: 30%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+article img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+figcaption {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
 form {
@@ -153,7 +157,9 @@ form input {
     padding: 10px;
 }
 
-input, textarea, button {
+input,
+textarea,
+button {
     width: 100%;
     margin: 5px;
     padding: 10px;
@@ -163,14 +169,14 @@ input, textarea, button {
     box-sizing: border-box;
 }
 
-button[type="button"] {
+button[type='button'] {
     background-color: #ccc;
     font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-button[type="button"]:hover {
+button[type='button']:hover {
     background-color: #c7c7c7;
 }
 
@@ -183,7 +189,7 @@ label {
     white-space: wrap;
 }
 
-input[type="checkbox"] {
+input[type='checkbox'] {
     margin: 10px;
     gap: 1px;
     width: auto;
@@ -196,8 +202,8 @@ input[type="checkbox"] {
     align-items: center;
 }
 
-button[type="submit"] {
-    background-color: #4CAF50;
+button[type='submit'] {
+    background-color: #4caf50;
     color: white;
     font-size: 1em;
     margin-top: 15px;
@@ -208,7 +214,7 @@ button[type="submit"] {
     transition: background-color 0.3s ease;
 }
 
-button[type="submit"]:hover {
+button[type='submit']:hover {
     background-color: #45a049;
 }
 
@@ -237,7 +243,7 @@ iframe {
 }
 
 .int {
-    color:orange;
+    color: orange;
 }
 
 .beginner {
@@ -311,6 +317,72 @@ a:hover {
 }
 
 #background a {
-    
     text-shadow: 2px 1px 4px white;
+}
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        font-size: larger;
+        padding: 10px;
+    }
+
+    .intro {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro img {
+        width: 90%;
+    }
+
+    .video {
+        padding: 10px;
+    }
+
+    .video h3 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    .video iframe {
+        max-width: 100%;
+        height: auto;
+    }
+
+    article {
+        width: 100%;
+    }
+}
+
+@media print {
+    nav,
+    footer {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    main {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    article {
+        width: 100%;
+    }
+
+    aside {
+        width: 100%;
+    }
 }
