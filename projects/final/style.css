@@ -163,6 +163,17 @@ input, textarea, button {
     box-sizing: border-box;
 }
 
+button[type="button"] {
+    background-color: #ccc;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="button"]:hover {
+    background-color: #c7c7c7;
+}
+
 textarea {
     resize: vertical;
     height: 120px;
@@ -299,3 +310,7 @@ a:hover {
     border-radius: 10px;
 }
 
+#background a {
+    
+    text-shadow: 2px 1px 4px white;
+}

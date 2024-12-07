@@ -18,6 +18,28 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
 
   document.getElementById("myForm").style.display = "none";
   document.getElementById("confirmationPage").style.display = "block";
+
+  const data = {
+      name: name,
+      email: email,
+      message: message,
+      confirmation: confirmation
+  }
+
+  console.log("Submitted data:", data);
+
+  const xhr = new XMLHttpRequest();
+  xhr.open("GET", "submit.json", true);
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+            alert('Form submitted successfully.');
+        } else {
+            alert('Error submitting form.');
+        }
+    }
+  };
+  xhr.send();
 });
 
 document.getElementById("backButton").addEventListener("click", function () {
