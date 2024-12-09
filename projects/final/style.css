@@ -9,6 +9,10 @@ body {
     line-height: 1.6;
 }
 
+.center {
+    align-content: center;
+}
+
 #home {
     display: flex;
     flex-direction: column;
@@ -55,7 +59,7 @@ nav a {
 }
 
 main {
-    flex: 1;
+
     padding: 20px;
     width: 75%;
     display: flex;
@@ -122,6 +126,10 @@ article {
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+blockquote {
+    color: darkgreen;
 }
 
 article img {
@@ -273,11 +281,6 @@ td a {
     margin-top: 10px;
 }
 
-a {
-    font-size: small;
-    text-decoration: none;
-}
-
 a:hover {
     text-decoration: underline;
 }
@@ -320,7 +323,42 @@ a:hover {
     text-shadow: 2px 1px 4px white;
 }
 
-/* Media Queries */
+.intro {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    text-align: left;
+    height: 80vh;
+    padding-left: 40%;
+    padding-bottom: 10%;
+    
+}
+
+.intro img {
+    max-width: 300px; 
+    border-radius: 10%; 
+    margin-right: 20px; 
+}
+
+.intro-text {
+    max-width: 600px;
+}
+
+.intro-text h1 {
+    margin-bottom: 10px;
+}
+
+.intro-text p {
+    font-size: 1.2em;
+}
+
+#top {
+    padding-top: 7px;
+}
+
+#organize {
+    flex-direction: row;
+}
 
 @media (max-width: 600px) {
     nav {
@@ -385,4 +423,14 @@ a:hover {
     aside {
         width: 100%;
     }
+}
+
+.center {
+    width: 100%;
+    flex-direction: column;
+}
+
+.need {
+    margin: 30px;
+    padding: 10px;
 }
