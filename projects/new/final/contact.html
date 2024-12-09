@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Hyun Kim</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        Hyun Kim
+    </header>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="skills.html">Skills</a>
+        <a href="experiences.html">Experiences</a>
+        <a href="education.html">Education</a>
+        <a href="projects.html">Projects</a>
+        <a href="career.html">Career</a>
+        <a href="contact.html" class="current">Contact</a>
+    </nav>
+    <main class="center">
+        <form id="myForm">
+            <h2>Contact Me</h2>
+            Name: <input type="text" id="name" name="name" placeholder="Your Name" required><br>
+            Email: <input type="email" id="email" name="email" placeholder="Your Email" required><br>
+            Message: <textarea id="message" name="message" placeholder="Your Message" required></textarea><br>
+            <div class="container">
+                <input type="checkbox" name="confirmation" id="confirmation">
+                <label for="confirmation">Would you like to get a confirmation email?</label>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="confirmationPage" style="display: none;">
+            <form>
+                <h2>Thank you!</h2>
+                <p><strong>Name:</strong> <span id="displayName"></span></p>
+                <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+                <p><strong>Message:</strong> <span id="displayMessage"></span></p>
+                <p><strong>Confirmation Email:</strong> <span id="displayConfirmation"></span></p>
+                <button type="button" id="backButton">Send Another Message</button>
+            </form>
+        </div>
+        
+    </main>
+    <footer>
+        &copy;2024 Hyun Kim. All Rights Reserved.
+    </footer>
+    <script src="form.js"></script>
+</body>
+</html>
